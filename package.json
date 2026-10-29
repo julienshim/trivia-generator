@@ -1,0 +1,12 @@
+{
+  "name": "trivia-generator",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A framework for turning structured page data into trivia Q&A.",
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "devDependencies": {
+    "jsdom": "^30.1.3"
+  }
+}

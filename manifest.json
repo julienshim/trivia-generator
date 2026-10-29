@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Trivia Generator",
+  "version": "2.0",
+  "description": "Turn structured page data into trivia Q&A, driven by site profiles.",
+  "action": {},
+  "background": {
+    "scripts": ["background.js"],
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://en.wikipedia.org/wiki/*",
+        "https://www.imdb.com/title/tt*"
+      ],
+      "js": [
+        "engine/transforms.js",
+        "engine/templates.js",
+        "engine/extractor.js",
+        "profiles/wikipedia.js",
+        "profiles/imdb.js",
+        "engine/content.js"
+      ]
+    }
+  ]
+}
